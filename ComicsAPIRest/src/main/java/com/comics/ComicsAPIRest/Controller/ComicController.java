@@ -38,10 +38,8 @@ public class ComicController {
     @GetMapping("/comics/search/{nom}")
     public int getIdComic(@PathVariable("nom") String nom) {
     	Comic comi = new Comic();
-    	ComicService comicService = new ComicService();
     	int identifiant = 0;
     		 // parcourir la liste de tous les personnages
-    	     System.out.println(comicService.getAllComics().size());
 	    	 for(int i = 1; i <= comicService.getAllComics().size(); i++)
 	         {
 	    		 comi = comicService.getComicById(i);
